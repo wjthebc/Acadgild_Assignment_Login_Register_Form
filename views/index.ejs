@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <% include ./partials/head %>
+  </head>
+  <body style="text-align:center">
+    <header>
+    <% include ./partials/header %>
+    </header>
+  <h1>Welcome!</h1>
+  <% if (user) { %>
+  <h4>You are currently loggged in.<br/>Please <a href="/portfolio">click here</a> to view my Portfolio</h4>
+  <% } %>
+  <% if (!user) { %>
+    <h4>You are not currently logged in.<br/>Please <a href="/login">click here</a> to log in or <a href="/register">click here </a>to register.</h4>
+  <% } %>
+  </body>
+  <% include ./partials/scripts %>
+</html>
